@@ -1,25 +1,46 @@
 # SkyRadar
-quadtree algorythm in a CSFML project
 
-## Le projet:
+Simulation of aerian traffic in 2D CSFML and use of Quadtree for optimisation
 
-Créer un simulateur de trafic aérien en 2D à partir d'une map passée en paramètre :
+## Project:
 
-Pour cette première version de simulateur, il est demandé de considérer deux types d'entités:
-- les avions 
-- les tours de controle
+Create a simulation for aerian traffic in 2D from a given map:
 
-#### Les règles de base:
- - Les avions volent d'un endroit donné à un autre
- - Les avions apparaissent sur la simulation quand ils décollent
- - Les avions disparaissent quand ils atterrissent ou lorsqu'il rencontre un autre avion
- - Les avions se déplace en ligne droite acec une vitesse constante
- - Les tours de contrôle empêchent les collisionsentre avions dans leur périmètre d'action
- - Les tours de contrôle ne bougent pas
- - Les tours de contrôle apparaissent au lancement de la simulation
+For the simulation we need to consider 2 type of entities
+- Planes
+- Control tower
 
- ### Le but 
- Amener à la réflexion sur les quadtrees
+### Basic Rules:
+ - Planes fligth straigth from a point to an other in constant speed
+ - Planes disapear when they arrived at destination
+ - Two planes who collide both disapears
+ - Towers disable collision in their radius
 
-    
+### Installation
+ Clone this Repository or download the code, and compile the program with Makefile.
+
+ ~~~bash
+ make
+ ~~~
+
+ Run the program with the path to a script. Example script are given in the script folder.
+ ~~~bash
+ ./my_radar path_to_script
+ ~~~
+
+### Create scripts
+ You can create a script with the generator in the script folfer
+
+#### Requierment
+ You need python3 to generate a script.
+ Install it with :
+ ~~~bash
+ sudo apt instal python3
+ ~~~
+ #### Generation
+ generate a script by precising the number of planes and towers.
+
+ ~~~bash
+ python3 generator.py -p [nb_planes] -t [nb_towers]
+ ~~~
 
