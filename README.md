@@ -41,6 +41,6 @@ For the simulation we need to consider 2 type of entities
  generate a script by precising the number of planes and towers.
 
  ~~~bash
- python3 generator.py -p [nb_planes] -t [nb_towers]
+ python3 generator.py [-p nb_planes] [-t nb_towers]
  ~~~
 
